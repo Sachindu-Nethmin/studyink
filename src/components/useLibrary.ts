@@ -6,7 +6,7 @@ import { frontMatter, planSections } from "@/lib/sections";
 import * as store from "@/lib/store";
 import type { Lecture, Settings, Subject } from "@/lib/types";
 
-/** The courses the book starts with (MSc in IS, 2021/22). Names are written in by the student. */
+/** The courses the book starts with (an honours degree in IS, 2021/22). Names are written in by the student. */
 const STARTER: [string, number][] = [
   ["IS6101", 353],
   ["IS7101", 1779],

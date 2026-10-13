@@ -9,7 +9,7 @@ cover_image: https://raw.githubusercontent.com/Sachindu-Nethmin/studyink/main/do
 
 ## What I Built
 
-I'm doing an MSc, and every week brings another deck of fifty slides. Slides are made for being *presented*, not for revising from: half the meaning is in what the lecturer said, the diagrams are scattered across the deck, and the night before an exam nobody wants to click through 300 of them.
+I'm doing my honours degree, and every week brings another deck of fifty slides. Slides are made for being *presented*, not for revising from: half the meaning is in what the lecturer said, the diagrams are scattered across the deck, and the night before an exam nobody wants to click through 300 of them.
 
 So I built **StudyInk**. You drop in a lecture deck (`.pptx` or `.pdf`) and it becomes a chapter of a study book: a spiral notebook with an index tab for each subject, pages that turn, and notes written to be *scanned*, not read.
 
@@ -91,7 +91,7 @@ Because the slides aren't mine.
 Lecture slides belong to the lecturer and the university. Every cloud "summarise my slides" tool starts by asking you to upload them: someone else's material, sent to a server neither of you controls. With an open-weight model running locally, the question never comes up:
 
 - **The slides never leave my laptop.** LibreOffice, PyMuPDF and Gemma all run on the same machine. There's no account, and nothing to upload.
-- **There's no bill per page.** A 59-slide deck is about 60 model calls: around fifteen looks at figures, a title, and a dozen sections. On a metered API that's a cost for every lecture, for every student, every semester. Here it's a few minutes of a laptop that was already on. That's what makes a one-off price possible.
+- **There's no bill per page.** My 59-slide deck took 24 model calls (ten looks at figures, one chapter title, thirteen sections) and about seven minutes on my laptop. On a metered API that's a cost for every lecture, for every student, every semester. Here it's a few minutes of a laptop that was already on. That's what makes a one-off price possible.
 - **It works without the internet.** Campus Wi-Fi during exam week is not something to build a product on.
 - **I could fix it when it was wrong.** When the finder mistook cards for tables, or a table blew the token budget, I could see exactly what the model was given and change it, or swap in a different model. With no model at all, the book still fills in from the slides' own words, footnotes and all.
 

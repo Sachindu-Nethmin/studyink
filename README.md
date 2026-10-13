@@ -2,6 +2,8 @@
 
 **Lecture slides in, a study book out.**
 
+![A chapter of StudyInk: the gist, short points with footnotes, and a step flow](docs/images/04-points.jpg)
+
 Drop in a lecture deck (`.pptx` or `.pdf`). StudyInk cuts the figures out of the slides, an open-weight model (Gemma 4, running in Ollama on your own laptop) looks at every figure and writes the lecture up as pages of a study book. Every point has a footnote that points back to the slide it came from.
 
 It looks and behaves like a spiral notebook: an index tab along the top for each subject, chapters that turn like pages, and notes built to be scanned rather than read. Each section has a highlighted gist, short pen-arrow points, numbered step flows, comparison tables, figures taped in with a caption, key terms on an index card, a sticky note to remember, and self-check questions whose answers stay folded until you've tried.
@@ -34,7 +36,7 @@ Lecture slides belong to the lecturer and the university, so uploading them to a
 | Slide text and figure crops | Gemma in Ollama on this laptop. No cloud API, no account, no per-page fee |
 | The finished study book | This browser's IndexedDB, nowhere else. *Download my study book* gives you one JSON file |
 
-It also makes the economics work. A 59-slide deck is about 60 model calls: around 15 figure looks, a title, and 12–15 sections. On a closed API, that's a bill for every lecture, every semester, for every student. Here it costs electricity: about five minutes on an M-series laptop with a 4-bit Gemma 4 E4B.
+It also makes the economics work. A 59-slide deck took 24 model calls (10 figure looks, a chapter title and 13 sections) and about seven minutes on an M-series laptop with a 4-bit Gemma 4 E4B. On a closed API, that's a bill for every lecture, every semester, for every student. Here it costs electricity.
 
 Every piece is swappable: any Ollama model with vision, or any OpenAI-compatible server running an open model. With no model at all, the book still fills in. Figures are kept by rule and captioned with the slide title, and each section shows the slides' own words with the same footnotes.
 
@@ -51,7 +53,7 @@ npm run dev
 
 Open http://localhost:3000, write your name on the cover and open the book. Then use **Add a lecture**: pick the subject and drop in a deck.
 
-The book starts with index tabs for the MSc courses it was built for (IS6101, IS7101–IS7112). You write each subject's name on its divider page, and you can add more tabs on the inside cover.
+The book starts with index tabs for the honours-degree courses it was built for (IS6101, IS7101–IS7112). You write each subject's name on its divider page, and you can add more tabs on the inside cover.
 
 ## Install it as a Mac app
 
