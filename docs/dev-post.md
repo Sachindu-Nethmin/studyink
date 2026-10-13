@@ -45,7 +45,9 @@ Every section is built to be skimmed: **the gist** highlighted, **short points**
 
 ## Demo
 
-▶ **Watch the demo:** [YouTube link]
+▶ **Watch the demo:**
+
+{% youtube 2TxgfABTZ6g %}
 
 | Contents: a tab for every subject | On a phone |
 |---|---|
@@ -99,10 +101,6 @@ A closed API would probably have written slightly better notes on day one. But I
 
 <!-- ## My First User
 Who tried it, what they said, and whether they'd pay. Remove this section if you haven't handed it to anyone yet. -->
-
-## My Agent Session
-
-I built StudyInk with an AI coding agent. [Agent session link]
 
 ## Prize Categories
 
