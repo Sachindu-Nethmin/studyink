@@ -6,7 +6,8 @@
  */
 import type { Section, Slide } from "./types";
 
-const OUTLINE = /^(outline|agenda|contents?|overview|today'?s? (lecture|topics?|session)|on today'?s lecture|learning (outcomes|objectives)|objectives|what you should be able to do|session outcomes)\b/i;
+// (decks often use a curly apostrophe: "On today’s lecture")
+const OUTLINE = /^(outline|agenda|contents?|overview|today['’]?s? (lecture|topics?|session)|on today['’]?s lecture|learning (outcomes|objectives)|objectives|what you should be able to do|session outcomes)\b/i;
 const MIN_WORDS = 110;
 const MAX_WORDS = 950;
 const MAX_SLIDES = 7;
