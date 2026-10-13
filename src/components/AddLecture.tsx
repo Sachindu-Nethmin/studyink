@@ -38,7 +38,7 @@ export function AddLecture({ lib, go, subjectId }: { lib: Library; go: Go; subje
 
   // everything still being written, then the last few that were finished
   const newest = [...lib.lectures].sort((a, b) => b.addedAt - a.addedAt);
-  const active = newest.filter((l) => l.status !== "done");
+  const active = newest.filter((l) => l.status !== "done").reverse(); // the one being written first, then the queue
   const finished = newest.filter((l) => l.status === "done").slice(0, active.length ? 1 : 2);
 
   return (

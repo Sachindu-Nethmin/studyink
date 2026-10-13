@@ -26,7 +26,7 @@ You can overrule Gemma: take a figure out, or put back one it set aside. "Have G
 
 ## Why it's built on open pieces
 
-Lecture slides belong to the lecturer and the university, and a lot of LMS terms say not to upload them to third-party services. So nothing leaves the laptop:
+Lecture slides belong to the lecturer and the university, so uploading them to a cloud AI means sending someone else's material to a server neither of you controls. So nothing leaves the laptop:
 
 | What | Where it goes |
 | --- | --- |
