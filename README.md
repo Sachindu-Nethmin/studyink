@@ -53,6 +53,19 @@ Open http://localhost:3000, write your name on the cover and open the book. Then
 
 The book starts with index tabs for the MSc courses it was built for (IS6101, IS7101–IS7112). You write each subject's name on its divider page, and you can add more tabs on the inside cover.
 
+## Install it as a Mac app
+
+```bash
+packaging/build_app.sh      # builds StudyInk.app into ~/Applications and dist/StudyInk.dmg
+```
+
+StudyInk.app is a native window (Swift + WebKit) around the notebook's own server. Node and the built notebook are bundled inside, so the app doesn't need Node, npm or a terminal. It starts Ollama if it's installed but not running, and when you quit it stops its server and asks Ollama to unload the model, so the memory comes back. If a chapter is still being written, it asks before quitting; Gemma picks up where it stopped next time.
+
+- **Your study book** lives in the app's own WebKit storage. *Download my study book* on the inside cover saves a copy to Downloads.
+- **Settings:** StudyInk → Settings File… (`~/Library/Application Support/StudyInk/studyink.env`) to change the model or the Python it uses. The server log is next to it.
+- **Still needed on the Mac:** Ollama with a vision model (`ollama pull gemma4:e4b`), a `python3` with PyMuPDF and Pillow (the build records which one), and LibreOffice for `.pptx` decks.
+- **Sharing the .dmg:** the app is signed ad hoc, not notarized. On another Mac, open it once with right-click → Open (or System Settings → Privacy & Security → Open Anyway).
+
 ## What's inside
 
 ```
@@ -67,6 +80,7 @@ src/components/useLibrary.ts the job runner: read → look → name → write, r
 src/components/Chapter.tsx   a chapter: opener, sections, figure plates, key terms, footnotes, slide peek
 src/components/PagedSheet.tsx, pageTurn.ts   screen-sized pages and the paper page turn (from Footnotes)
 src/app/api/                 extract (streams progress), ai, health; all stateless
+packaging/                   build_app.sh and the Mac app: StudyInk.swift, Info.plist, make_icon.py
 ```
 
 ## Credits

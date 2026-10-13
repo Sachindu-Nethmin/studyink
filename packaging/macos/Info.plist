@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key><string>StudyInk</string>
+	<key>CFBundleDisplayName</key><string>StudyInk</string>
+	<key>CFBundleIdentifier</key><string>app.studyink.desktop</string>
+	<key>CFBundleExecutable</key><string>StudyInk</string>
+	<key>CFBundleIconFile</key><string>AppIcon</string>
+	<key>CFBundlePackageType</key><string>APPL</string>
+	<key>CFBundleShortVersionString</key><string>@VERSION@</string>
+	<key>CFBundleVersion</key><string>@BUILD@</string>
+	<key>LSMinimumSystemVersion</key><string>13.0</string>
+	<key>LSApplicationCategoryType</key><string>public.app-category.education</string>
+	<key>NSHighResolutionCapable</key><true/>
+	<key>NSHumanReadableCopyright</key><string>MIT License. Lecture slides in, a study book out, written by Gemma on this Mac.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict><key>NSAllowsLocalNetworking</key><true/></dict>
+	<key>StudyInkPort</key><string>8795</string>
+	<key>StudyInkPython</key><string>@PYTHON@</string>
+	<key>StudyInkProvider</key><string>@PROVIDER@</string>
+	<key>StudyInkOllama</key><string>@BASE_URL@</string>
+	<key>StudyInkModel</key><string>@MODEL@</string>
+</dict>
+</plist>

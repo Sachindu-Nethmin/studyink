@@ -54,7 +54,7 @@ export async function POST(req: Request) {
         rm(dir, { recursive: true, force: true }).catch(() => {});
       };
 
-      const proc = spawn(PYTHON, [SCRIPT, input, "--name", file.name], { stdio: ["ignore", "pipe", "pipe"] });
+      const proc = spawn(/*turbopackIgnore: true*/ PYTHON, [SCRIPT, input, "--name", file.name], { stdio: ["ignore", "pipe", "pipe"] });
       child = proc;
       const out: Buffer[] = [];
       let errTail = "";

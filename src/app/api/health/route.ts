@@ -9,7 +9,7 @@ type Check = { pymupdf: boolean; pptx: boolean; libreoffice: boolean; problem?: 
 
 function checkReader(): Promise<Check> {
   return new Promise((resolve) => {
-    execFile(PYTHON, [SCRIPT, "--check"], { timeout: 15_000 }, (err, stdout) => {
+    execFile(/*turbopackIgnore: true*/ PYTHON, [SCRIPT, "--check"], { timeout: 15_000 }, (err, stdout) => {
       try {
         resolve(JSON.parse(stdout));
       } catch {

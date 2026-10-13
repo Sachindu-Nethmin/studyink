@@ -256,6 +256,11 @@ export function useLibrary() {
     });
   }, [enqueue]);
 
+  // the Mac app asks this before quitting, to warn that a chapter is still being written
+  useEffect(() => {
+    (window as Window & { studyinkBusy?: number }).studyinkBusy = Object.keys(live).length;
+  }, [live]);
+
   const saveSettings = useCallback(
     async (p: Partial<Settings>) => {
       const next = { ...settings, ...p };
